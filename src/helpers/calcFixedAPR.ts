@@ -14,16 +14,30 @@
  * limitations under the License.
  */
 
+<<<<<<< HEAD
 import { ONE_YEAR_IN_SECONDS } from "../../src/constants/time";
+=======
+import {
+  ONE_YEAR_IN_SECONDS,
+} from "../../src/constants/time";
+>>>>>>> ff72a94 (change time units, safeguard zero time)
 
 export function calcFixedAPR(
   spotPrice: number,
   secondsUntilMaturity: number
 ): number {
+<<<<<<< HEAD
   if (secondsUntilMaturity > 0) {
     const timeRemaining = secondsUntilMaturity / ONE_YEAR_IN_SECONDS;
     return ((1 - spotPrice) / timeRemaining) * 100;
   } else {
+=======
+  if ( secondsUntilMaturity > 0) {
+    const timeRemaining = secondsUntilMaturity / ONE_YEAR_IN_SECONDS;
+    return ((1 - spotPrice) / timeRemaining) * 100;
+  }
+  else {
+>>>>>>> ff72a94 (change time units, safeguard zero time)
     return 0;
   }
 }
